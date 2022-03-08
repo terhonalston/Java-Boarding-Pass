@@ -14,6 +14,9 @@ public class Ticket {
         String inputDest;
         String inputETA;
         String inputDeparture;
+        public Ticket(){
+
+        }
 
         public Ticket(String inputName, String inputEmail, String inputPhone, String inputGender,
                       String inputAge, String inputPass, String inputDate, String inputOrigin, String inputDest,
@@ -30,6 +33,7 @@ public class Ticket {
                 this.inputETA = inputETA;
                 this.inputDeparture = inputDeparture;
         }
+
         public String getInputName() {
                 return inputName;
         }
