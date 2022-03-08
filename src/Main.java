@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Random;
@@ -5,9 +9,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         HashSet<Integer> boardingPassList = new HashSet<>();
+        Path path = Path.of("src/TicketInfo.txt");
+        if (!Files.exists(path)) {
+            Path files = Files.createFile(path);
+        }
         Ticket ticket = new Ticket();
         inputInformation(ticket, scanner, boardingPassList);
         System.out.println(ticket.getInputName());
