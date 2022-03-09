@@ -1,1 +1,1 @@
-T, tma, 28124, Male, 24, 708159, 1241, NYC, Atlanta, 30.0, 21031
+v, qw, 12, Female, 5, 245422, 12, Atlanta, NYC, 30.0, 3, 11.25

@@ -78,7 +78,7 @@ public class Main {
         //We will also need to generate a total price for the ticket.
         //can try stack
         totalTicketPrice(ticket);
-
+        passengersTicket.add(String.valueOf(totalTicketPrice(ticket)));
         String ticketInfo = String.join(", ", passengersTicket);
         Files.writeString(filePath, ticketInfo );
     }
@@ -88,26 +88,17 @@ public class Main {
         String gender = ticket.getGender();
         int age = Integer.parseInt(ticket.getAge());
         double price = Double.parseDouble(ticket.getETA());
-        if(age<=12){
-            price = price * .50;
-            if(gender.equalsIgnoreCase("Female")){
-                price=price*.25;
-                ticket.setPrice(price);
-                return price;
-            }
-        }
-        else if(age>=60){
-            price = price * .60;
-            if(gender.equalsIgnoreCase("Female")){
-                price=price*.25;
-                ticket.setPrice(price);
-                return price;
-            }
-        }
-        else  if(gender.equalsIgnoreCase("Female")){
-            price=price*.25;
+        if(gender.equalsIgnoreCase("Female")){
+            price-=price*.25;
             ticket.setPrice(price);
-            return price;
+        }
+        if(age<=12){
+            price-=price * .50;
+
+        }
+        if(age>=60){
+            price -= price * .60;
+
         }
         ticket.setPrice(price);
         return price;
