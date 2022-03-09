@@ -17,33 +17,47 @@ public class Main {
             Path files = Files.createFile(path);
         }
         Ticket ticket = new Ticket();
-        inputInformation(ticket, scanner, boardingPassList);
+        inputInformation(ticket, scanner, boardingPassList, path);
         System.out.println(ticket.getInputName());
         System.out.println(ticket.getInputAge());
     }
 
-    public static void inputInformation(Ticket ticket, Scanner scanner, HashSet<Integer>boardingPassList){
+    public static void inputInformation(Ticket ticket, Scanner scanner, HashSet<Integer>boardingPassList, Path filePath) throws IOException {
+        ArrayList oneTicket = new ArrayList<>();
         System.out.println("Enter your name.");
         ticket.setInputName(scanner.nextLine());
+        oneTicket.add(ticket.getInputName());
         System.out.println("Enter your email.");
         ticket.setInputEmail(scanner.nextLine());
+        oneTicket.add(ticket.getInputEmail());
         System.out.println("Enter your phone number.");
         ticket.setInputPhone(scanner.nextLine());
+        oneTicket.add(ticket.getInputPhone());
         System.out.println("Enter your gender.");
         ticket.setInputGender(scanner.nextLine());
+        oneTicket.add(ticket.getInputGender());
         System.out.println("Enter your age.");
         ticket.setInputAge(scanner.nextLine());
+        oneTicket.add(ticket.getInputAge());
         ticket.setInputPass(Integer.toString(boardingPassNumber(boardingPassList)));
-        System.out.println("Enter your date.");
+        oneTicket.add(ticket.getInputPass());
+        System.out.println("Enter the date.");
         ticket.setInputDate(scanner.nextLine());
+        oneTicket.add(ticket.getInputDate());
         System.out.println("Enter your origin.");
         ticket.setInputOrigin(scanner.nextLine());
+        oneTicket.add(ticket.getInputOrigin());
         System.out.println("Enter your dest.");
         ticket.setInputDest(scanner.nextLine());
+        oneTicket.add(ticket.getInputDest());
         System.out.println("Enter your ETA.");
         ticket.setInputETA(scanner.nextLine());
+        oneTicket.add(ticket.getInputETA());
         System.out.println("Enter your departure.");
         ticket.setInputDeparture(scanner.nextLine());
+        oneTicket.add(ticket.getInputDeparture());
+        String ticketInfo = String.join(", ", oneTicket);
+        Files.writeString(filePath, ticketInfo );
     }
     public static int boardingPassNumber(HashSet<Integer>boardingPassList){
         boolean numberNotAdded = true;
