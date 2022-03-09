@@ -13,14 +13,15 @@ public class Ticket {
         String origin;
         String destination;
         String ETA;
-        String departure;
+        String departureTime;
+        String price;
         public Ticket(){
 
         }
 
         public Ticket(String Name, String Email, String phoneNumber, String Gender,
                       String Age, String boardingNumber, String Date, String Origin, String destination,
-                      String ETA, String departure) {
+                      String ETA, String departureTime) {
                 this.name = Name;
                 this.email = Email;
                 this.phoneNumber = phoneNumber;
@@ -31,7 +32,7 @@ public class Ticket {
                 this.origin = Origin;
                 this.destination = destination;
                 this.ETA = ETA;
-                this.departure = departure;
+                this.departureTime = departureTime;
         }
 
         public String getName() {
@@ -114,11 +115,19 @@ public class Ticket {
                 this.ETA = ETA;
         }
 
-        public String getDeparture() {
-                return departure;
+        public String getDepartureTime() {
+                return departureTime;
         }
 
-        public void setDeparture(String departure) {
-                this.departure = departure;
+        public void setDepartureTime(String departureTime) {
+                this.departureTime = departureTime;
+        }
+
+        public String getPrice() {
+                return price;
+        }
+
+        public void setPrice(String price) {
+                this.price = price;
         }
 }

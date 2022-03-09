@@ -40,18 +40,3 @@ Age > = 60, 60% reduction of ticket price regardless of gender
 
 Females, 25% discount on the ticket price
 
-Required Technologies:
-
-Git
-
-Java
-
-GitHub
-
-JUnit
-
-Optional Technologies:
-
-GUI Library
-
-Formatting Library (Date, Time, ETC) 
