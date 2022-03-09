@@ -14,7 +14,7 @@ public class Ticket {
         String destination;
         String ETA;
         String departureTime;
-        String price;
+        double price;
         public Ticket(){
 
         }
@@ -123,11 +123,11 @@ public class Ticket {
                 this.departureTime = departureTime;
         }
 
-        public String getPrice() {
+        public double getPrice() {
                 return price;
         }
 
-        public void setPrice(String price) {
+        public void setPrice(double price) {
                 this.price = price;
         }
 }
