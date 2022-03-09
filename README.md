@@ -38,5 +38,6 @@ Age < = 12, 50% reduction of ticket price regardless of gender
 
 Age > = 60, 60% reduction of ticket price regardless of gender
 
-Females, 25% discount on the ticket price
+Females, 25% discount on the ticket price...
+
 
