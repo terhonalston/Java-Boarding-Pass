@@ -4,18 +4,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TicketTest {
-
+    Ticket ticket = new Ticket("Ash", "ash1@yahoo.com", "123-456-7890",
+            "Female", "25", "123456", "03/10/2022", "NYC", "Atlanta",
+            "30", "10am");
     @BeforeEach
     void setUp() {
-        Ticket ticket = new Ticket();
+        Ticket ticket = new Ticket("Ash", "ash1@yahoo.com", "123-456-7890",
+                "Female", "25", "123456", "03/10/2022", "NYC", "Atlanta",
+                "30", "10am");
     }
 
     @Test
     void getName() {
+        assertEquals(ticket.getName(), "Ash");
     }
 
     @Test
     void setName() {
+        ticket.setName("Brock");
+        assertEquals(ticket.getName(), "Brock");
     }
 
     @Test
