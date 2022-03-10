@@ -115,10 +115,13 @@ class TicketTest {
 
     @Test
     void getETA() {
+        assertEquals(ticket.getETA(), "30");
     }
 
     @Test
     void setETA() {
+        ticket.setETA("50");
+        assertEquals(ticket.getETA(), "50");
     }
 
     @Test
@@ -135,101 +138,5 @@ class TicketTest {
 
     @Test
     void setPrice() {
-    }
-
-    @Test
-    void testGetName() {
-    }
-
-    @Test
-    void testSetName() {
-    }
-
-    @Test
-    void testGetEmail() {
-    }
-
-    @Test
-    void testSetEmail() {
-    }
-
-    @Test
-    void testGetPhoneNumber() {
-    }
-
-    @Test
-    void testSetPhoneNumber() {
-    }
-
-    @Test
-    void testGetGender() {
-    }
-
-    @Test
-    void testSetGender() {
-    }
-
-    @Test
-    void testGetAge() {
-    }
-
-    @Test
-    void testSetAge() {
-    }
-
-    @Test
-    void testGetBoardingNumber() {
-    }
-
-    @Test
-    void testSetBoardingNumber() {
-    }
-
-    @Test
-    void testGetDate() {
-    }
-
-    @Test
-    void testSetDate() {
-    }
-
-    @Test
-    void testGetOrigin() {
-    }
-
-    @Test
-    void testSetOrigin() {
-    }
-
-    @Test
-    void testGetDestination() {
-    }
-
-    @Test
-    void testSetDestination() {
-    }
-
-    @Test
-    void testGetETA() {
-    }
-
-    @Test
-    void testSetETA() {
-    }
-
-    @Test
-    void testGetDepartureTime() {
-    }
-
-    @Test
-    void testSetDepartureTime() {
-    }
-
-    @Test
-    void testGetPrice() {
-    }
-
-    @Test
-    void testSetPrice() {
     }
 }
