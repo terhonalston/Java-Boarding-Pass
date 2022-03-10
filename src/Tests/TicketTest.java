@@ -82,10 +82,13 @@ class TicketTest {
 
     @Test
     void getDate() {
+        assertEquals(ticket.getDate(), "03/10/2022");
     }
 
     @Test
     void setDate() {
+        ticket.setDate("03/11/2022");
+        assertEquals(ticket.getDate(), "03/11/2022");
     }
 
     @Test
