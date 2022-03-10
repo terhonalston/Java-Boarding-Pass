@@ -60,10 +60,13 @@ class TicketTest {
 
     @Test
     void getAge() {
+        assertEquals(ticket.getAge(), "25");
     }
 
     @Test
     void setAge() {
+        ticket.setAge("30");
+        assertEquals(ticket.getAge(), "30");
     }
 
     @Test
