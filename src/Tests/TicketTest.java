@@ -104,10 +104,13 @@ class TicketTest {
 
     @Test
     void getDestination() {
+        assertEquals(ticket.getDestination(), "Atlanta");
     }
 
     @Test
     void setDestination() {
+        ticket.setDestination("NYC");
+        assertEquals(ticket.getDestination(), "NYC");
     }
 
     @Test
