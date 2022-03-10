@@ -137,9 +137,13 @@ class TicketTest {
 
     @Test
     void getPrice() {
+        ticket.setPrice(30);
+        assertEquals(ticket.getPrice(), 30);
     }
 
     @Test
     void setPrice() {
+        ticket.setPrice(30);
+        assertEquals(ticket.getPrice(), 30);
     }
 }
