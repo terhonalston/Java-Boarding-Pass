@@ -27,10 +27,13 @@ class TicketTest {
 
     @Test
     void getEmail() {
+        assertEquals(ticket.getEmail(), "ash1@yahoo.com");
     }
 
     @Test
     void setEmail() {
+        ticket.setEmail("pikachu@gmail.com");
+        assertEquals(ticket.getEmail(), "pikachu@gmail.com");
     }
 
     @Test
