@@ -71,10 +71,13 @@ class TicketTest {
 
     @Test
     void getBoardingNumber() {
+        assertEquals(ticket.getBoardingNumber(), "123456");
     }
 
     @Test
     void setBoardingNumber() {
+        ticket.setBoardingNumber("333444");
+        assertEquals(ticket.getBoardingNumber(), "333444");
     }
 
     @Test
