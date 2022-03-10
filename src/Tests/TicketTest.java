@@ -49,10 +49,13 @@ class TicketTest {
 
     @Test
     void getGender() {
+        assertEquals(ticket.getGender(), "Female");
     }
 
     @Test
     void setGender() {
+        ticket.setGender("Male");
+        assertEquals(ticket.getGender(), "Male");
     }
 
     @Test
