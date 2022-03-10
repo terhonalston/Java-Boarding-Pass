@@ -38,10 +38,13 @@ class TicketTest {
 
     @Test
     void getPhoneNumber() {
+        assertEquals(ticket.getPhoneNumber(), "123-456-7890");
     }
 
     @Test
     void setPhoneNumber() {
+        ticket.setPhoneNumber("098-765-4321");
+        assertEquals(ticket.getPhoneNumber(), "098-765-4321");
     }
 
     @Test
