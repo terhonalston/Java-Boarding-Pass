@@ -126,10 +126,13 @@ class TicketTest {
 
     @Test
     void getDepartureTime() {
+        assertEquals(ticket.getDepartureTime(), "10am");
     }
 
     @Test
     void setDepartureTime() {
+        ticket.setDepartureTime("12pm");
+        assertEquals(ticket.getDepartureTime(), "12pm");
     }
 
     @Test
