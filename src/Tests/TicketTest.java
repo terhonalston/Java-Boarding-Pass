@@ -93,10 +93,13 @@ class TicketTest {
 
     @Test
     void getOrigin() {
+        assertEquals(ticket.getOrigin(), "NYC");
     }
 
     @Test
     void setOrigin() {
+        ticket.setOrigin("Atlanta");
+        assertEquals(ticket.getOrigin(), "Atlanta");
     }
 
     @Test
